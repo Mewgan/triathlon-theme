@@ -1,0 +1,84 @@
+<!-- Events Start -->
+<section class="events haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="head-section">
+                <div class="border-title"><h2>Liste des épreuves</h2></div>
+            </div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                {% for post in posts %}
+                    {% set params = {} %}
+                    {% for arg in args %}
+                        {% if arg.value != '' %}
+                            {% set params = params|merge({(arg.route):arg.value}) %}
+                        {% else %}
+                            {% if arg.alias == 'p' %}
+                                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                            {% elseif arg.alias == 'c' %}
+                                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% set race_date = field_render('race_date', 'post@'~post.id) %}
+                    {% set is_finished = race_date | split('/') | reverse | join < "now" | date('Ymd') %}
+                    <div class="panel panel-default event {% if is_finished %}disabled{% endif %}">
+                        <div class="panel-heading" role="tab" id="heading-{{ loop.index }}">
+                            <a class="accordion-head" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ loop.index }}" aria-expanded="true" aria-controls="collapse-{{ loop.index }}">
+                                <div>
+                                    <span class="date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <em>{{ race_date }}</em>
+                                    </span>
+                                    <span class="flag">
+                                        <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
+                                    </span>
+                                </div>
+                                <div>
+                                    <h3>{{ post.title }}</h3>
+                                </div>
+                                {% if is_finished %}
+                                <div class="unavailable">
+                                    <span class="notice">Terminé</span>
+                                </div>
+                                {% endif %}
+                            </a>
+                            <a href="{{ field_render('race_booking_link', 'post@'~post.id) }}" class="btn-theme red btn-book-now">
+                                <span class="txt">Réserver</span>
+                                <span class="round">
+                                    <i class="icon-arrow-right-latest-races"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div id="collapse-{{ loop.index }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{ loop.index }}">
+                            <div class="panel-body">
+                                {{ post.content | raw }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% if pagination.pages_count > 1 %}
+                <nav class="pagination-area">
+                    <ul class="pagination">
+                        {% if pagination.page > 1 %}
+                            <li><a href="?page=1"><<</a></li>
+                            <li><a aria-label="Previous" href="?page={{ pagination.page - 1 }}"><span class="icon-arrow-left" aria-hidden="true"></span></a></li>
+                        {% endif %}
+                        {% for p in range(max(pagination.page - 4, 1),min(pagination.page + 4, pagination.pages_count)) %}
+                            <li class="{% if p == pagination.page %}active{% endif %}">
+                                <a class="current-page" href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                        {% endfor %}
+                        {% if pagination.page < pagination.pages_count %}
+                            <li><a aria-label="Next" href="?page={{ pagination.page + 1 }}"><span class="icon-arrow-right-latest-races" aria-hidden="true"></span></a></li>
+                            <li><a href="?page={{ pagination.pages_count }}">>></a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+<!-- Events End -->

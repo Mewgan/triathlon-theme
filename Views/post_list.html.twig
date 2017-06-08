@@ -1,0 +1,69 @@
+<!-- Blog Start -->
+<div class="blog-post haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="posts row">
+                {% for post in posts %}
+                    {% set params = {} %}
+                    {% for arg in args %}
+                        {% if arg.value != '' %}
+                            {% set params = params|merge({(arg.route):arg.value}) %}
+                        {% else %}
+                            {% if arg.alias == 'p' %}
+                                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                            {% elseif arg.alias == 'c' %}
+                                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                <article class="post col-md-4 col-sm-6">
+                    <div class="post-img">
+                        <figure>
+                            <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
+                            <div class="plus-sign">
+                                <div class="tg-display-table">
+                                    <div class="tg-display-table-cell">
+                                        <a href="{{ link(route, params) }}"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mask"></div>
+                        </figure>
+                    </div>
+                    <ul class="post-meta">
+                        <li>{{ post.updated_at.date | date('d/m/Y') }}</li>
+                    </ul>
+                    <h2><a href="{{ link(route, params) }}">{{ post.title }}</a></h2>
+                    <div class="description">
+                        <p>{{ post.description }}</p>
+                    </div>
+                </article>
+
+                {% endfor %}
+
+            </div>
+            {% if pagination.pages_count > 1 %}
+                <nav class="pagination-area">
+                    <ul class="pagination">
+                        {% if pagination.page > 1 %}
+                            <li><a href="?page=1"><<</a></li>
+                            <li><a aria-label="Previous" href="?page={{ pagination.page - 1 }}"><span class="icon-arrow-left" aria-hidden="true"></span></a></li>
+                        {% endif %}
+                        {% for p in range(max(pagination.page - 4, 1),min(pagination.page + 4, pagination.pages_count)) %}
+                            <li class="{% if p == pagination.page %}active{% endif %}">
+                                <a class="current-page" href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                        {% endfor %}
+                        {% if pagination.page < pagination.pages_count %}
+                            <li><a aria-label="Next" href="?page={{ pagination.page + 1 }}"><span class="icon-arrow-right-latest-races" aria-hidden="true"></span></a></li>
+                            <li><a href="?page={{ pagination.pages_count }}">>></a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+<!-- Blog End -->

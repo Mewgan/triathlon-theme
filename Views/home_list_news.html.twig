@@ -1,0 +1,32 @@
+<div class="row">
+    <h2>Actualités</h2>
+    <div id="news-event-slider" class="news-event-slider">
+        {% for post in posts %}
+            {% set params = {} %}
+            {% for arg in args %}
+                {% if arg.value != '' %}
+                    {% set params = params|merge({(arg.route):arg.value}) %}
+                {% else %}
+                    {% if arg.alias == 'p' %}
+                        {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
+                    {% elseif arg.alias == 'c' %}
+                        {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <div class="item">
+                <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
+                <div class="foot">
+                    <a class="foot" href="{{ link(route,params) }}">
+                        <i class="icon-arrow-right-latest-races"></i>
+                        <span class="title">{{ post.title }}</span>
+                        <span class="date">
+                            <em class="fa fa-calendar-o"></em>
+                            <em>{{ post.updated_at.date | date('d/m/Y') }}</em>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

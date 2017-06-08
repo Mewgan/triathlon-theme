@@ -1,0 +1,101 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block page %}
+
+    <!-- Heading Start -->
+    <section class="page-heading haslayout">
+        <div class="container">
+            <div class="row">
+                <h1>A propos de nous</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Heading End -->
+
+    <!-- Trithlon History Start -->
+    <section class="trithlon-history haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="head-section">
+                        <div class="border-title"><h2>{{ data.page.title }}</h2></div>
+                    </div>
+                    <div class="description">
+                        {{ field_render('description', 'page') | raw }}
+                    </div>
+                    {% set about_us_blocs = field_render('blocs', 'page') %}
+                    {% if not about_us_blocs is empty %}
+                    <div class="three-columns row">
+                        {% for bloc in about_us_blocs %}
+                        <div class="col-sm-4 mb20">
+                            <img src="{{ img(bloc.image.path) }}" alt="{{ bloc.image.alt }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Option End -->
+
+    <!-- Team Start -->
+    {% set organizers = field_render('organizers', 'page') %}
+    {% if not organizers is empty %}
+    <section class="team haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="head-section">
+                    <div class="border-title"><h2>Nos Organisateurs</h2></div>
+                </div>
+                <div class="row">
+                    {% for organizer in organizers %}
+                    <div class="col-md-3 col-sm-3 col-xs-6 member">
+                        <div class="member-img">
+                            <div>
+                                <img src="{{ img(organizer.image.path) }}" alt="{{ organizer.image.alt }}">
+                                <div class="mask"></div>
+                            </div>
+                        </div>
+                        <div class="member-foot">
+                            <span class="member-name">{{ organizer.image.title }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <!-- Team End -->
+
+    <!-- Client Testimonials Start -->
+    {% set testimonials = field_render('testimonials', 'page') %}
+    {% if not testimonials is empty %}
+    <section class="testimonials haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="head-section">
+                    <div class="border-title">
+                        <h3>Témoignages</h3>
+                    </div>
+                </div>
+                <div id="testimonial-slider" class="testimonial-slider">
+                    {% for testimonial in testimonials %}
+                    <div class="item">
+                        <i class="fa fa-edit"></i>
+                        <strong class="client-name">{{ testimonial.user }}</strong>
+                        <div class="description">
+                            <p>{{ testimonial.content }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <!-- Client Testimonials End -->
+
+{% endblock %}
+

@@ -1,0 +1,24 @@
+<!-- Gallery Start -->
+<div class="blog-post haslayout">
+    <div class="container">
+        <div class="row">
+            <article class="post single">
+                <h2>{{ post.title }}</h2>
+                <span class="date">{{ post.updated_at.date | date('d/m/Y') }}</span>
+                <div class="center mb40">
+                    <img class="centered" src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
+                </div>
+                <div class="description">
+                    {{ post.content|raw }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- Gallery End -->
+
+<script>
+    document.title = "{{ field_render('meta_title', 'post@' ~ post.id) }}";
+    $('meta[name=description]').attr('content', "{{ field_render('meta_description', 'post@' ~ post.id) }}");
+    $('meta[name=keywords]').attr('content', "{{ field_render('meta_keywords', 'post@' ~ post.id) }}");
+</script>

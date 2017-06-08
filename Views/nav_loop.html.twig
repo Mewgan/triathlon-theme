@@ -1,0 +1,10 @@
+{% for item in items %}
+    <li>
+        <a href="{{ full_url(item.url) }}" data-hover="{{ item.title }}">{{ item.title }}</a>
+        {% if item.children|length > 0 %}
+            <ul>
+                {% include "Triathlon/Views/nav_loop.html.twig" with {'items': item.children} %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}

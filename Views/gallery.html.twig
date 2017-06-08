@@ -1,0 +1,28 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block page %}
+
+    <div class="content">
+        <div class="container_12">
+            <div class="grid_12">
+                <h3 class="head1 center">Notre galerie</h3>
+                <div id="grid" class="main">
+                    {% set galleries = field_render('galleries', 'page') %}
+                    {% for gallery in galleries %}
+                        <div class="view">
+                            <div class="view-back">
+                                <a href="{{ img(gallery.image.path) }}">&rarr;</a>
+                            </div>
+                            <img src="{{ img(gallery.image.path) }}" alt="{{ gallery.image.alt }}"/>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,195 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block page %}
+
+    {% set home_slider = field_render('home_slider', 'page') %}
+    <!-- Slider Start -->
+    <section class="banner-slider haslayout">
+        <div class="container">
+            <div class="row">
+                <div id="main-slider" class="main-slider row">
+                    {% for slide in home_slider %}
+                    <div class="item">
+                        <div class="col-sm-6">
+                            <div class="heading-area">
+                                <h1>{{ slide.title }}</h1>
+                                <span class="date">{{ slide.sub_title }}</span>
+                            </div>
+                            <p>{{ slide.description }}</p>
+                            {% if not slide.link is empty %}
+                            <a href="{{ slide.link }}" class="btn-theme red">
+                                <span class="txt">Lien</span>
+                                <span class="round">
+                                    <i class="icon-arrow-right-latest-races"></i>
+                                </span>
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="{{ img(slide.image.path) }}" alt="{{ slide.image.alt }}">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slider End -->
+
+    {% set welcome_post = field_render('home_welcome_post', 'page') %}
+    <!-- Welcome Start -->
+    <section class="welcome-area haslayout">
+        <div class="container">
+            <div class="row">
+                <h2>{{ welcome_post.title }}</h2>
+                <span class="subtitle">{{ welcome_post.description }}</span>
+                <div class="description">
+                    {{ welcome_post.content | truncate(300, true) | raw }}
+                </div>
+                <a href="{{ link('module:post.type:dynamic.action:read',{'slug': welcome_post.slug}) }}" class="btn-theme black">
+                    <span class="txt">Voir plus</span>
+                    <span class="round">
+                        <i class="icon-arrow-right-latest-races"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome End -->
+
+    {% set home_3_blocs = field_render('home_3_blocs', 'page') %}
+    <!-- Option Start -->
+    <section class="option-section haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="three-columns row">
+                    {% for bloc in home_3_blocs %}
+                    <div class="col-sm-4">
+                        <div class="border-title">
+                            <strong>{{ loop.index }}</strong>
+                        </div>
+                        <img src="{{ img(bloc.post.thumbnail.path) }}" alt="{{ bloc.post.thumbnail.alt }}">
+                        <h3>{{ bloc.post.title }}</h3>
+                        <span class="athlete-naem">{{ bloc.post.description }}</span>
+                        <div class="description">
+                            {{ bloc.post.content | truncate(300, true) | raw }}
+                        </div>
+                        <a href="{{ link('module:post.type:dynamic.action:read',{'slug': bloc.post.slug}) }}" class="btn-theme black learn-more">
+                            <span class="txt">Voir plus</span>
+                            <span class="round">
+                                <i class="icon-arrow-right-latest-races"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Option End -->
+
+    <!-- Latest Race Start -->
+    <section class="latest-race haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="race-area row">
+                    <div class="col-sm-7">
+                        {{ content_render('home_list_race') }}
+                    </div>
+                    <div class="col-sm-5">
+                        {% set section4_image = field_render('section4_image', 'page') %}
+                        <img src="{{ img(section4_image.path) }}" alt="{{ section4_image.alt }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Race End -->
+
+    <!-- Gallery Start -->
+    <div class="gallery-section haslayout">
+        <div class="container">
+            <div class="row">
+                <h2>Galerie</h2>
+                <div class="gallery">
+                    <!-- begin filter -->
+                    <ul id="gallery-cats" class="option-set">
+                        <li class="select">
+                            <a class="btn-theme black" data-filter="*">
+                                <span class="txt">Tout</span>
+                                <span class="round">
+                                    <i class="icon-arrow-right-latest-races"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% set gallery_categories = field_render('home_galleries_categories', 'page') %}
+                        {% for category in gallery_categories %}
+                        <li>
+                            <a class="btn-theme black" data-filter=".{{ category.name | replace({' ':'-'}) | lower}}">
+                                <span class="txt">{{ category.name }}</span>
+                                <span class="round">
+                                    <i class="icon-arrow-right-latest-races"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <!-- end filter -->
+                    <div id="portfolio-content" class="portfolio-content isotope">
+                        {% set galleries = field_render('home_galleries', 'page') %}
+                        {% for gallery in galleries %}
+                            {% set gal_cat = gallery.categories | split(',') %}
+                            <article class="gallery-item col-sm-4 {% for cat in gal_cat %}{{ cat | replace({' ':'-'}) | lower }} {% endfor %}">
+                                <a href="{{ img(gallery.image.path) }}" data-rel="prettyPhoto[gallery1]"><img src="{{ img(gallery.image.path) }}" alt="{{ gallery.image.alt }}"></a>
+                                <button class="btn-theme btn-date red">
+                                    <span class="txt">{{ gallery.image.updated_at.date | date('d/m/Y') }}</span>
+                                    <span class="round">
+                                        <i class="icon-arrow-right-latest-races"></i>
+                                    </span>
+                                </button>
+                            </article>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+    <!-- News and Event Start -->
+    <section class="news-event-section haslayout">
+        <div class="container">
+            {{ content_render('home_list_news') }}
+        </div>
+    </section>
+    <!-- News and Event End -->
+
+    <!-- Our Sponsors Start -->
+    {% set partners = field_render('home_list_partners', 'page') %}
+    {% if not partners is empty %}
+    <section class="our-sponsors haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="border-title">
+                    <h2>Nos partenaires</h2>
+                </div>
+                <div id="sponsors-slider" class="sponsors-slider">
+                    {% for partner in partners %}
+                    <div class="item">
+                        <div class="box">
+                            <img src="{{ img(partner.image.path) }}" alt="{{ partner.image.alt }}">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <!-- Our Sponsors End -->
+
+{% endblock %}

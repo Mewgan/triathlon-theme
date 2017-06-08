@@ -1,0 +1,104 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block page %}
+
+    <!-- Heading Start -->
+    <section class="page-heading haslayout">
+        <div class="container">
+            <div class="row">
+                <h1>Contact</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container content">
+        <div id="contactus-sec" class="fullwidth">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="fullwidth contact-textbox text-center">
+                        <header class="po-headingborder">
+                            <h2>Où nous trouver</h2>
+                        </header>
+                        {{ field_render('contact_content', 'page') | raw }}
+                    </div>
+                </div>
+                <!-- Contact info -->
+                <div class="po-contactinfo-sec fullwidth">
+                    <div class="col-xs-4 text-center">
+                        <article>
+                            <figure class="po-color">
+                                <i class="fa fa-map-marker float"></i>
+                            </figure>
+                            {{ address.address }},<br>
+                            {{ address.postal_code }} <br>
+                            {{ address.city }} <br>
+                        </article>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <article>
+                            <figure class="po-color">
+                                <i class="fa fa-mobile float"></i>
+                            </figure>
+                            <p>{{ society.phone }}</p>
+                        </article>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <article>
+                            <figure class="po-color">
+                                <i class="fa fa-envelope float"></i>
+                            </figure>
+                            <p><a href="mailto:{{ society.email }}">{{ society.email }}</a></p>
+                        </article>
+                    </div>
+                </div>
+                <!-- Contact info End -->
+            </div>
+        </div>
+        <section class="po-mapsec fullwidth">
+            <div class="fullwidth" id="gmap" style="height: 350px;"></div>
+        </section>
+        <section class="fullwidth po-getsocial po-bgcolor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="fullwidth contact-textbox text-center">
+                            <header class="po-headingborder">
+                                <h2>Les réseaux sociaux</h2>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="fullwidth po-contactsocial">
+                        {% for social in socials %}
+                            <div class="col-md-20">
+                                <article>
+                                    <figure class="ico-{{ social.name | replace({' ': '-'}) | lower }}">
+                                        <i class="fa fa-{{ social.name | replace({' ': '-'}) | lower }}"></i>
+                                    </figure>
+                                    <h3><a href="{{ social.link }}">{{ social.name | upper }}</a></h3>
+                                </article>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArNGSSl-KPS23l24EilPNQhfmEw_V8BtI&libraries=places&region=FR"></script>
+    <script>
+        $(document).ready(function () {
+            var latlng = new google.maps.LatLng({{ address.latitude }}, {{ address.longitude }});
+            var map = new google.maps.Map(document.getElementById('gmap'), {
+                zoom: 13,
+                center: latlng
+            });
+            new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+        })
+    </script>
+{% endblock %}
