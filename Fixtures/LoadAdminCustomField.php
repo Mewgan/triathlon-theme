@@ -242,9 +242,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'page@society-triathlon-home' => [
-                    'Save 20% by booking now to our triathlon. Lorem ipsum dolor sit ametumuit cresciam nui consectetur brevis estiam nunc aeneat quod.',
-                    'Save 20% by booking now to our triathlon. Lorem ipsum dolor sit ametumuit cresciam nui consectetur brevis estiam nunc aeneat quod.',
-                    'Save 20% by booking now to our triathlon. Lorem ipsum dolor sit ametumuit cresciam nui consectetur brevis estiam nunc aeneat quod.',
+                    'Économisez 20% en réservant maintenant pour notre triathlon.',
+                    'Économisez 20% en réservant maintenant pour notre triathlon.',
+                    'Économisez 20% en réservant maintenant pour notre triathlon.',
                 ]
             ]
         ],
@@ -378,10 +378,10 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'page@society-triathlon-home' => [
-                    'Spring',
-                    'Summer',
-                    'Autumn',
-                    'Winter',
+                    'Printemps',
+                    'Été',
+                    'Automne',
+                    'Hiver',
                 ]
             ]
         ],
@@ -435,12 +435,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'page@society-triathlon-home' => [
-                    'Spring',
-                    'Summer',
-                    'Winter',
-                    'Autumn,Winter',
-                    'Summer,Spring',
-                    'Autumn,Summer',
+                    'Printemps',
+                    'Été',
+                    'Hiver',
+                    'Automne,Hiver',
+                    'Été,Printemps',
+                    'Automne,Été',
                 ]
             ]
         ],
@@ -494,7 +494,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Triathlon About Us Page',
             'data' => [],
             'content' => [
-                'page@society-triathlon-about-us' => '<p>Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren\'t sure which way to do something, do it both ways and see which works better.</p>',
+                'page@society-triathlon-about-us' => '<p>De la concentration et un travail acharné sont les véritables clés du succès. Gardez vos yeux sur l\'objectif, et continuez de suivre l\'étape suivante pour le compléter. Si vous n\'êtes pas sûr de la façon de faire quelque chose, faites-le dans les deux sens et voyez ce qui fonctionne le mieux.</p>',
             ]
         ],
         'triathlon_about_us_blocs' => [
@@ -614,8 +614,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'page@society-triathlon-about-us' => [
-                    'I had a great time at their triathlon. Very nice organization and lovely weather.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc augue libero, luctus sed velit ut, tempor sollicitudin dui.',
-                    'I had a great time at their triathlon. Very nice organization and lovely weather.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc augue libero, luctus sed velit ut, tempor sollicitudin dui.',
+                    'J\'ai passé un bon moment à leur triathlon. Très bonne organisation et du beau temps.',
+                    'J\'ai passé un bon moment à leur triathlon. Très bonne organisation et du beau temps.',
                 ]
             ]
         ],

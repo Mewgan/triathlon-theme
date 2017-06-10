@@ -17,17 +17,19 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
         'triathlon-welcome-post' => [
             'title' => 'Bienvenue sur notre Triathlon !',
             'slug' => 'bienvenue-sur-notre-triathlon',
-            'short_description' => 'I know I can conquer any challenge, because... I run.',
-            'content' => '<p>To be a champion, I think you have to see the big picture. It\'s not about winning and losing; it\'s about every day hard work and about thriving on a challenge. It\'s about embracing the pain that you\'ll experience at the end of a race and not being afraid. I think people think too hard and get afraid of a challenge.</p>',
+            'short_description' => 'Je sais que je peux réussir tout type de défi, car ... Je cours.',
+            'content' => '<p>Le succès est le résultat de la perfection, d\'un travail acharné, d\'un apprentissage à partir des échecs, de loyauté et de persistance.</p>
+            <p>Pour être un champion, je pense qu\'il faut voir les choses en grand. Il ne s\'agit pas de gagner ou de perdre; il s\'agit d\'un travail quotidien et de prospérité sur un défi que l\'on se fixe. Il s\'agit d\'embrasser la douleur que vous allez vivre au bout d\'une course et de ne pas avoir peur. Je pense que les gens pensent trop et prennent peur par rapport à la difficulté.</p>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img2.jpg',
             'categories' => [],
             'website' => 'triathlon-society'
         ],
         'triathlon-service-1' => [
-            'title' => 'Featured Athlete',
-            'slug' => 'featured-athlete',
+            'title' => 'Athlète vedette',
+            'slug' => 'athlete-vedette',
             'short_description' => 'Paula Browns',
-            'content' => '<p>Success is the result of perfection, hard work, learning from failure, loyalty, and persistence.</p><p>To be a champion, I think you have to see the big picture. It\'s not about winning and losing; it\'s about every day hard work and about thriving on a challenge. It\'s about embracing the pain that you\'ll experience at the end of a race and not being afraid. I think people think too hard and get afraid of a challenge.</p>',
+            'content' => '<p>Le succès est le résultat de la perfection, d\'un travail acharné, d\'un apprentissage à partir des échecs, de loyauté et de persistance.</p>
+            <p>Pour être un champion, je pense qu\'il faut voir les choses en grand. Il ne s\'agit pas de gagner ou de perdre; il s\'agit d\'un travail quotidien et de prospérité sur un défi que l\'on se fixe. Il s\'agit d\'embrasser la douleur que vous allez vivre au bout d\'une course et de ne pas avoir peur. Je pense que les gens pensent trop et prennent peur par rapport à la difficulté.</p>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img3.jpg',
             'categories' => [
                 'service'
@@ -35,10 +37,11 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'website' => 'triathlon-society'
         ],
         'triathlon-service-2' => [
-            'title' => 'Photographers Wanted',
-            'slug' => 'photographers-wanted',
+            'title' => 'On recherche des photographes',
+            'slug' => 'on-recherche-des-photographes',
             'short_description' => 'NYC Tri Race Weekend',
-            'content' => '<p>Success is the result of perfection, hard work, learning from failure, loyalty, and persistence.</p><p>To be a champion, I think you have to see the big picture. It\'s not about winning and losing; it\'s about every day hard work and about thriving on a challenge. It\'s about embracing the pain that you\'ll experience at the end of a race and not being afraid. I think people think too hard and get afraid of a challenge.</p>',
+            'content' => '<p>Le succès est le résultat de la perfection, d\'un travail acharné, d\'un apprentissage à partir des échecs, de loyauté et de persistance.</p>
+            <p>Pour être un champion, je pense qu\'il faut voir les choses en grand. Il ne s\'agit pas de gagner ou de perdre; il s\'agit d\'un travail quotidien et de prospérité sur un défi que l\'on se fixe. Il s\'agit d\'embrasser la douleur que vous allez vivre au bout d\'une course et de ne pas avoir peur. Je pense que les gens pensent trop et prennent peur par rapport à la difficulté.</p>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img4.jpg',
             'categories' => [
                 'service'
@@ -46,10 +49,11 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'website' => 'triathlon-society'
         ],
         'triathlon-service-3' => [
-            'title' => 'Book Your Hotel',
-            'slug' => 'book-your-hotel',
+            'title' => 'Réservez votre hôtel',
+            'slug' => 'reservez-votre-hotel',
             'short_description' => 'For The Triathlon Today!',
-            'content' => '<p>Success is the result of perfection, hard work, learning from failure, loyalty, and persistence.</p><p>To be a champion, I think you have to see the big picture. It\'s not about winning and losing; it\'s about every day hard work and about thriving on a challenge. It\'s about embracing the pain that you\'ll experience at the end of a race and not being afraid. I think people think too hard and get afraid of a challenge.</p>',
+            'content' => '<p>Le succès est le résultat de la perfection, d\'un travail acharné, d\'un apprentissage à partir des échecs, de loyauté et de persistance.</p>
+            <p>Pour être un champion, je pense qu\'il faut voir les choses en grand. Il ne s\'agit pas de gagner ou de perdre; il s\'agit d\'un travail quotidien et de prospérité sur un défi que l\'on se fixe. Il s\'agit d\'embrasser la douleur que vous allez vivre au bout d\'une course et de ne pas avoir peur. Je pense que les gens pensent trop et prennent peur par rapport à la difficulté.</p>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img5.jpg',
             'categories' => [
                 'service'
@@ -135,34 +139,34 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'content' => '<table class="table theme-table">
 										<thead>
 											<tr>
-												<th><strong>Contact Information</strong></th>
-												<th><strong>Event Information</strong></th>
+												<th><strong>Informations de contact</strong></th>
+												<th><strong>Informations sur l\'événement</strong></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td><strong>Event Location:</strong> Versailles, France</td>
-												<td><strong>Entry Fee:</strong> $99</td>
+												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+												<td><strong>Frais d\'entrée:</strong> 99€</td>
 											</tr>
 											<tr>
 												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Money Prize:</strong> $5000</td>
+												<td><strong>Lot à gagner:</strong> 5000€</td>
 											</tr>
 											<tr>
-												<td><strong>Phone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> CAMTRI Sprint Triathlon French Cup will feature a sprint distance for elite athletes.</td>
+												<td><strong>Téléphone:</strong> 563-232-4318</td>
+												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
 											</tr>
 											<tr>
-												<td><strong>Start date:</strong> 24/06/15</td>
-												<td><strong>Swim Course:</strong> 1 lap of 750 m</td>
+												<td><strong>Date de début:</strong> 24/06/15</td>
+												<td><strong>Natation:</strong> 1 tour de 750 m</td>
 											</tr>
 											<tr>
-												<td><strong>End date:</strong> 28/06/15</td>
-												<td><strong>Bike Course:</strong> 3 laps of 7 km; hilly and technical</td>
+												<td><strong>Date de fin:</strong> 28/06/15</td>
+												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
 											</tr>
 											<tr>
-												<td><strong>Last day to book by:</strong> 22/06/15</td>
-												<td><strong>Run Course:</strong> 2 laps of 2,6 km; totally flat</td>
+												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
 											</tr>
 										</tbody>
 									</table>',
@@ -179,34 +183,34 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'content' => '<table class="table theme-table">
 										<thead>
 											<tr>
-												<th><strong>Contact Information</strong></th>
-												<th><strong>Event Information</strong></th>
+												<th><strong>Informations de contact</strong></th>
+												<th><strong>Informations sur l\'événement</strong></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td><strong>Event Location:</strong> Versailles, France</td>
-												<td><strong>Entry Fee:</strong> $99</td>
+												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+												<td><strong>Frais d\'entrée:</strong> 99€</td>
 											</tr>
 											<tr>
 												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Money Prize:</strong> $5000</td>
+												<td><strong>Lot à gagner:</strong> 5000€</td>
 											</tr>
 											<tr>
-												<td><strong>Phone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> CAMTRI Sprint Triathlon French Cup will feature a sprint distance for elite athletes.</td>
+												<td><strong>Téléphone:</strong> 563-232-4318</td>
+												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
 											</tr>
 											<tr>
-												<td><strong>Start date:</strong> 24/06/15</td>
-												<td><strong>Swim Course:</strong> 1 lap of 750 m</td>
+												<td><strong>Date de début:</strong> 24/06/15</td>
+												<td><strong>Natation:</strong> 1 tour de 750 m</td>
 											</tr>
 											<tr>
-												<td><strong>End date:</strong> 28/06/15</td>
-												<td><strong>Bike Course:</strong> 3 laps of 7 km; hilly and technical</td>
+												<td><strong>Date de fin:</strong> 28/06/15</td>
+												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
 											</tr>
 											<tr>
-												<td><strong>Last day to book by:</strong> 22/06/15</td>
-												<td><strong>Run Course:</strong> 2 laps of 2,6 km; totally flat</td>
+												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
 											</tr>
 										</tbody>
 									</table>',
@@ -223,34 +227,34 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'content' => '<table class="table theme-table">
 										<thead>
 											<tr>
-												<th><strong>Contact Information</strong></th>
-												<th><strong>Event Information</strong></th>
+												<th><strong>Informations de contact</strong></th>
+												<th><strong>Informations sur l\'événement</strong></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td><strong>Event Location:</strong> Versailles, France</td>
-												<td><strong>Entry Fee:</strong> $99</td>
+												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+												<td><strong>Frais d\'entrée:</strong> 99€</td>
 											</tr>
 											<tr>
 												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Money Prize:</strong> $5000</td>
+												<td><strong>Lot à gagner:</strong> 5000€</td>
 											</tr>
 											<tr>
-												<td><strong>Phone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> CAMTRI Sprint Triathlon French Cup will feature a sprint distance for elite athletes.</td>
+												<td><strong>Téléphone:</strong> 563-232-4318</td>
+												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
 											</tr>
 											<tr>
-												<td><strong>Start date:</strong> 24/06/15</td>
-												<td><strong>Swim Course:</strong> 1 lap of 750 m</td>
+												<td><strong>Date de début:</strong> 24/06/15</td>
+												<td><strong>Natation:</strong> 1 tour de 750 m</td>
 											</tr>
 											<tr>
-												<td><strong>End date:</strong> 28/06/15</td>
-												<td><strong>Bike Course:</strong> 3 laps of 7 km; hilly and technical</td>
+												<td><strong>Date de fin:</strong> 28/06/15</td>
+												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
 											</tr>
 											<tr>
-												<td><strong>Last day to book by:</strong> 22/06/15</td>
-												<td><strong>Run Course:</strong> 2 laps of 2,6 km; totally flat</td>
+												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
 											</tr>
 										</tbody>
 									</table>',
