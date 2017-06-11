@@ -172,7 +172,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
 									</table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-01.png',
             'categories' => [
-                'course'
+                'triathlon-course'
             ],
             'website' => 'triathlon-society'
         ],
@@ -216,7 +216,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
 									</table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-02.png',
             'categories' => [
-                'course'
+                'triathlon-course'
             ],
             'website' => 'triathlon-society'
         ],
@@ -260,7 +260,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
 									</table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-03.png',
             'categories' => [
-                'course'
+                'triathlon-course'
             ],
             'website' => 'triathlon-society'
         ]

@@ -1,9 +1,5 @@
 {% extends template_from_string(data.website_layout) %}
 
-{% block css %}
-
-{% endblock %}
-
 {% block page %}
 
     {% set home_slider = field_render('home_slider', 'page') %}
@@ -98,7 +94,7 @@
             <div class="row">
                 <div class="race-area row">
                     <div class="col-sm-7">
-                        {{ content_render('home_list_race') }}
+                        {{ content_render('home_list_race') | raw }}
                     </div>
                     <div class="col-sm-5">
                         {% set section4_image = field_render('section4_image', 'page') %}
@@ -163,7 +159,7 @@
     <!-- News and Event Start -->
     <section class="news-event-section haslayout">
         <div class="container">
-            {{ content_render('home_list_news') }}
+            {{ content_render('home_list_news') | raw }}
         </div>
     </section>
     <!-- News and Event End -->
