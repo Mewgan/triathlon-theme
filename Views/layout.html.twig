@@ -73,7 +73,15 @@
         <div class="navigation-area haslayout">
             <div class="container">
                 <div class="row">
-                    <strong class="logo"><a href="{{ link('home') }}"><img src="{{ img(logo.path) }}" alt="{{ logo.alt }}" width="252" height="63"></a></strong>
+                    <strong class="logo center-align">
+                        <a href="{{ link('home') }}">
+                            {% if logo.path is defined %}
+                                <img src="{{ img(logo.path) }}" alt="{{ logo.alt }}" width="252" height="63">
+                            {% else %}
+                                <span class="fz3 text-white">{{ society.name }}</span>
+                            {% endif %}
+                        </a>
+                    </strong>
                     <nav id="nav" class="haslayout">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
