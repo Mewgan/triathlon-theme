@@ -2,18 +2,7 @@
     <h2>Actualités</h2>
     <div id="news-event-slider" class="news-event-slider">
         {% for post in posts %}
-            {% set params = {} %}
-            {% for arg in args %}
-                {% if arg.value != '' %}
-                    {% set params = params|merge({(arg.route):arg.value}) %}
-                {% else %}
-                    {% if arg.alias == 'p' %}
-                        {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-                    {% elseif arg.alias == 'c' %}
-                        {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
+            {% set params = get_post_params(args, post) %}
             <div class="item">
                 <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
                 <div class="foot">

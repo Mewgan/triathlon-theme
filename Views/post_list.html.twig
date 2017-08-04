@@ -4,41 +4,30 @@
         <div class="row">
             <div class="posts row">
                 {% for post in posts %}
-                    {% set params = {} %}
-                    {% for arg in args %}
-                        {% if arg.value != '' %}
-                            {% set params = params|merge({(arg.route):arg.value}) %}
-                        {% else %}
-                            {% if arg.alias == 'p' %}
-                                {% set params = params|merge({(arg.route):attribute(post,arg.column)}) %}
-                            {% elseif arg.alias == 'c' %}
-                                {% set params = params|merge({(arg.route):attribute(post.categories[0],arg.column)}) %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
+                    {% set params = get_post_params(args, post) %}
 
-                <article class="post col-md-4 col-sm-6">
-                    <div class="post-img">
-                        <figure>
-                            <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
-                            <div class="plus-sign">
-                                <div class="tg-display-table">
-                                    <div class="tg-display-table-cell">
-                                        <a href="{{ link(route, params) }}"><i class="fa fa-plus"></i></a>
+                    <article class="post col-md-4 col-sm-6">
+                        <div class="post-img">
+                            <figure>
+                                <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
+                                <div class="plus-sign">
+                                    <div class="tg-display-table">
+                                        <div class="tg-display-table-cell">
+                                            <a href="{{ link(route, params) }}"><i class="fa fa-plus"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mask"></div>
-                        </figure>
-                    </div>
-                    <ul class="post-meta">
-                        <li>{{ post.updated_at.date | date('d/m/Y') }}</li>
-                    </ul>
-                    <h2><a href="{{ link(route, params) }}">{{ post.title }}</a></h2>
-                    <div class="description">
-                        <p>{{ post.description }}</p>
-                    </div>
-                </article>
+                                <div class="mask"></div>
+                            </figure>
+                        </div>
+                        <ul class="post-meta">
+                            <li>{{ post.updated_at.date | date('d/m/Y') }}</li>
+                        </ul>
+                        <h2><a href="{{ link(route, params) }}">{{ post.title }}</a></h2>
+                        <div class="description">
+                            <p>{{ post.description }}</p>
+                        </div>
+                    </article>
 
                 {% endfor %}
 
