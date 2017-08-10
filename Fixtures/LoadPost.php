@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 namespace Jet\Themes\Triathlon\Fixtures;
 
@@ -65,7 +65,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-1',
             'short_description' => 'Aliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibuste.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img3.jpg',
             'categories' => [
                 'actualite'
@@ -77,7 +77,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-2',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' =>  '/src/Themes/Triathlon/Resources/public/img/img4.jpg',
             'categories' => [
                 'actualite'
@@ -89,7 +89,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-3',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' =>  '/src/Themes/Triathlon/Resources/public/img/img5.jpg',
             'categories' => [
                 'actualite'
@@ -101,7 +101,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-4',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img6.jpg',
             'categories' => [
                 'actualite'
@@ -113,7 +113,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-5',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img7.jpg',
             'categories' => [
                 'actualite'
@@ -125,7 +125,7 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'actualite-6',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies, odio at congue tincidunt, libero odio tincidunt est, vel sollicitudin purus odio non leo. Vestibulum vel congue quam, sed convallis elit. Etiam porta, elit ut pharetra finibus, justo odio sagittis libero, eu ullamcorper sem lectus sit amet neque. Donec ultricies erat eu massa feugiat commodo. Nunc id tristique orci. Donec dignissim lacinia velit in semper. Sed malesuada, augue sit amet mattis finibus, erat lacus viverra nibh, vitae semper tortor erat interdum purus. Etiam gravida at lorem in hendrerit. Integer quis neque justo. Ut pellentesque feugiat tortor nec blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec sit amet vestibulum nisi, quis aliquet neque. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</p>
-						  <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
+                          <blockquote><q>Phasellus sodales dignissim lacus, aliquam accumsan eros interdum ut. Aliquam in placerat felis. Duis a urna vitae justo efficitur sagittis. Aenean turpis risus, luctus eu accumsan eget, consectetur eu quam.</q></blockquote>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/img8.jpg',
             'categories' => [
                 'actualite'
@@ -137,39 +137,39 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'course-1',
             'short_description' => 'Aliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibuste.',
             'content' => '<table class="table theme-table">
-										<thead>
-											<tr>
-												<th><strong>Informations de contact</strong></th>
-												<th><strong>Informations sur l\'événement</strong></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
-												<td><strong>Frais d\'entrée:</strong> 99€</td>
-											</tr>
-											<tr>
-												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Lot à gagner:</strong> 5000€</td>
-											</tr>
-											<tr>
-												<td><strong>Téléphone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
-											</tr>
-											<tr>
-												<td><strong>Date de début:</strong> 24/06/15</td>
-												<td><strong>Natation:</strong> 1 tour de 750 m</td>
-											</tr>
-											<tr>
-												<td><strong>Date de fin:</strong> 28/06/15</td>
-												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
-											</tr>
-											<tr>
-												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
-												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
-											</tr>
-										</tbody>
-									</table>',
+                                        <thead>
+                                            <tr>
+                                                <th><strong>Informations de contact</strong></th>
+                                                <th><strong>Informations sur l\'événement</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+                                                <td><strong>Frais d\'entrée:</strong> 99€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Email:</strong> Lotye Léveillé</td>
+                                                <td><strong>Lot à gagner:</strong> 5000€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Téléphone:</strong> 563-232-4318</td>
+                                                <td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de début:</strong> 24/06/15</td>
+                                                <td><strong>Natation:</strong> 1 tour de 750 m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de fin:</strong> 28/06/15</td>
+                                                <td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+                                                <td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-01.png',
             'categories' => [
                 'triathlon-course'
@@ -181,39 +181,39 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'course-2',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<table class="table theme-table">
-										<thead>
-											<tr>
-												<th><strong>Informations de contact</strong></th>
-												<th><strong>Informations sur l\'événement</strong></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
-												<td><strong>Frais d\'entrée:</strong> 99€</td>
-											</tr>
-											<tr>
-												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Lot à gagner:</strong> 5000€</td>
-											</tr>
-											<tr>
-												<td><strong>Téléphone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
-											</tr>
-											<tr>
-												<td><strong>Date de début:</strong> 24/06/15</td>
-												<td><strong>Natation:</strong> 1 tour de 750 m</td>
-											</tr>
-											<tr>
-												<td><strong>Date de fin:</strong> 28/06/15</td>
-												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
-											</tr>
-											<tr>
-												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
-												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
-											</tr>
-										</tbody>
-									</table>',
+                                        <thead>
+                                            <tr>
+                                                <th><strong>Informations de contact</strong></th>
+                                                <th><strong>Informations sur l\'événement</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+                                                <td><strong>Frais d\'entrée:</strong> 99€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Email:</strong> Lotye Léveillé</td>
+                                                <td><strong>Lot à gagner:</strong> 5000€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Téléphone:</strong> 563-232-4318</td>
+                                                <td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de début:</strong> 24/06/15</td>
+                                                <td><strong>Natation:</strong> 1 tour de 750 m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de fin:</strong> 28/06/15</td>
+                                                <td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+                                                <td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-02.png',
             'categories' => [
                 'triathlon-course'
@@ -225,39 +225,39 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'slug' => 'course-3',
             'short_description' => 'Boliquam nibh ante, egestas id dictum a, commodo re luctus liberaesenucibus malesuada cibustew.',
             'content' => '<table class="table theme-table">
-										<thead>
-											<tr>
-												<th><strong>Informations de contact</strong></th>
-												<th><strong>Informations sur l\'événement</strong></th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
-												<td><strong>Frais d\'entrée:</strong> 99€</td>
-											</tr>
-											<tr>
-												<td><strong>Email:</strong> Lotye Léveillé</td>
-												<td><strong>Lot à gagner:</strong> 5000€</td>
-											</tr>
-											<tr>
-												<td><strong>Téléphone:</strong> 563-232-4318</td>
-												<td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
-											</tr>
-											<tr>
-												<td><strong>Date de début:</strong> 24/06/15</td>
-												<td><strong>Natation:</strong> 1 tour de 750 m</td>
-											</tr>
-											<tr>
-												<td><strong>Date de fin:</strong> 28/06/15</td>
-												<td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
-											</tr>
-											<tr>
-												<td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
-												<td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
-											</tr>
-										</tbody>
-									</table>',
+                                        <thead>
+                                            <tr>
+                                                <th><strong>Informations de contact</strong></th>
+                                                <th><strong>Informations sur l\'événement</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Lieu de l\'événement:</strong> Versailles, France</td>
+                                                <td><strong>Frais d\'entrée:</strong> 99€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Email:</strong> Lotye Léveillé</td>
+                                                <td><strong>Lot à gagner:</strong> 5000€</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Téléphone:</strong> 563-232-4318</td>
+                                                <td><strong>Description:</strong> La Coupe de France du Triathlon Sprint CAMTRI aura une distance de sprint pour les athlètes d\'élite.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de début:</strong> 24/06/15</td>
+                                                <td><strong>Natation:</strong> 1 tour de 750 m</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date de fin:</strong> 28/06/15</td>
+                                                <td><strong>Course de vélo:</strong> 3 tours de 7 km; Vallonné et technique</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Dernier jour de réservation:</strong> 22/06/15</td>
+                                                <td><strong>Course à pieds:</strong> 2 tours de 2,6 km; Totalement plat</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>',
             'thumbnail' => '/src/Themes/Triathlon/Resources/public/img/race/flag-icon-03.png',
             'categories' => [
                 'triathlon-course'
